@@ -1,0 +1,32 @@
+{
+  "name": "gulp-svg-json-spritesheet",
+  "version": "0.0.2",
+  "description": "Compress SVGs into a JSON spritesheet.",
+  "license": "MIT",
+  "repository": "gurmukhp/gulp-svg-json-spritesheet",
+  "author": {
+    "name": "Gurmukh Panesar",
+    "email": "gurmukhp@gmail.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "svgo": "^0.6.6",
+    "xo": "^0.14.0"
+  }
+}
