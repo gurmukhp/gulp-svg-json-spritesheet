@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save-dev gulp-svg-spritesheet
+$ npm install --save-dev gulp-svg-json-spritesheet
 ```
 
 
@@ -14,7 +14,7 @@ $ npm install --save-dev gulp-svg-spritesheet
 
 ```js
 var gulp = require('gulp');
-var svg = require('gulp-svg-spritesheet');
+var svg = require('gulp-svg-json-spritesheet');
 
 gulp.task('default', function() {
   return gulp.src('svg/*.svg')
