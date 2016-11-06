@@ -29,7 +29,7 @@ module.exports = function(file, opts) {
 
     if (file.isStream()) {
       callback(new gutil.PluginError(
-          'gulp-svg-spritesheet', 'Streaming not supported'));
+          'gulp-svg-json-spritesheet', 'Streaming not supported'));
       return;
     }
 
@@ -42,7 +42,7 @@ module.exports = function(file, opts) {
         spritesheet[fileName] = result;
       });
     } catch (error) {
-      this.emit('error', new gutil.PluginError('gulp-svg-spritesheet', error));
+      this.emit('error', new gutil.PluginError('gulp-svg-json-spritesheet', error));
     }
 
     callback();
