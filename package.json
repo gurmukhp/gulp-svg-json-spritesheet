@@ -22,11 +22,11 @@
   ],
   "dependencies": {
     "gulp-util": "^3.0.7",
+    "svgo": "^0.6.6",
     "through2": "^2.0.1"
   },
   "devDependencies": {
     "ava": "^0.14.0",
-    "svgo": "^0.6.6",
     "xo": "^0.14.0"
   }
 }
