@@ -1,6 +1,6 @@
 {
   "name": "gulp-svg-json-spritesheet",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Compress SVGs into a JSON spritesheet.",
   "license": "MIT",
   "repository": "gurmukhp/gulp-svg-json-spritesheet",
