@@ -8,7 +8,7 @@ var SVGO = require('svgo');
 /**
  * File must be a buffer and not a string.
  * @param {string} file Name of the output compressed JSON file.
- * @param {Object} opts Other options (not yet used).
+ * @param {Object} opts Other options.
  */
 module.exports = function(file, opts) {
   if (!file) {
@@ -17,9 +17,11 @@ module.exports = function(file, opts) {
         'Missing parameter file for gulp-svg-json-spritesheet');
   }
 
-  opts = opts || {};
+  opts = opts || {
+      svgo: null
+  };
   var spritesheet = {};
-  var svgCompressor = new SVGO();
+  var svgCompressor = new SVGO(opts.svgo);
 
   function compressEachFile(file, encoding, callback) {
     if (file.isNull()) {
