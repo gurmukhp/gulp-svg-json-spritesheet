@@ -40,8 +40,12 @@ module.exports = function(file, opts) {
         var filePath = file.path;
 
         // Gets file name from file path.
-        var fileName = filePath.substring(filePath.lastIndexOf('/') + 1);
-        spritesheet[fileName] = result;
+        if (opts.showFilePath) {
+          spritesheet[fileName] = result;
+        } else {
+          var fileName = filePath.substring(filePath.lastIndexOf('/') + 1);
+          spritesheet[fileName] = result;
+        }
       });
     } catch (error) {
       this.emit('error', new gutil.PluginError('gulp-svg-json-spritesheet', error));
