@@ -37,14 +37,17 @@ module.exports = function(file, opts) {
 
     try {
       svgCompressor.optimize(file.contents.toString(), function(result) {
-        var filePath = file.path;
+        const filePath = file.path;
 
         // Gets file name from file path.
         if (opts.showFilePath) {
           spritesheet[fileName] = result;
-        } else {
-          var fileName = filePath.substring(filePath.lastIndexOf('/') + 1);
-          spritesheet[fileName] = result;
+        }
+        
+        else {
+          const prefix = (opts.prefix) ? opts.prefix : '';
+          const fileName = filePath.substring(filePath.lastIndexOf('/') + 1);
+          spritesheet[prefix+fileName] = result;
         }
       });
     } catch (error) {
